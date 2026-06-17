@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | Escape the Moon</title>
+    <title>Escape the Moon</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
     <div id="unity-container">
@@ -22,7 +21,18 @@
     <script>
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("ServiceWorker.js");
+          navigator.serviceWorker.register("ServiceWorker.js").then(reg => {
+            reg.onupdatefound = () => {
+              const installingWorker = reg.installing;
+              installingWorker.onstatechange = () => {
+                if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  if (confirm('업데이트가 있습니다, 다시 로드하시겠습니까?')) {
+                    location.reload();
+                  }
+                }
+              };
+            };
+          });
         }
       });
 
@@ -57,16 +67,16 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/UnityBuild.loader.js";
+      var loaderUrl = buildUrl + "/6880781bbe13645e35a5652347616e64.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/UnityBuild.data.unityweb",
-        frameworkUrl: buildUrl + "/UnityBuild.framework.js.unityweb",
-        codeUrl: buildUrl + "/UnityBuild.wasm.unityweb",
+        dataUrl: buildUrl + "/0f47c4d53464de0781cc0655a96e06ef.data.unityweb",
+        frameworkUrl: buildUrl + "/9bd5612ea14ee45002749fdc7dd49377.framework.js.unityweb",
+        codeUrl: buildUrl + "/3f2126597accf684e35dadf3f8c0e813.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Malangjwi",
         productName: "Escape the Moon",
-        productVersion: "1.1.0",
+        productVersion: "1.2.0",
         showBanner: unityShowBanner,
         // errorHandler: function(err, url, line) {
         //    alert("error " + err + " occurred at line " + line);

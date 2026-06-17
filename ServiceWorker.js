@@ -1,17 +1,21 @@
-const cacheName = "Malangjwi-Escape the Moon-1.1.0";
+const cacheName = "Malangjwi-Escape the Moon-1.2.0";
 const contentToCache = [
-    "Build/UnityBuild.loader.js",
-    "Build/UnityBuild.framework.js.unityweb",
-    "Build/UnityBuild.data.unityweb",
-    "Build/UnityBuild.wasm.unityweb",
+    "Build/6880781bbe13645e35a5652347616e64.loader.js",
+    "Build/9bd5612ea14ee45002749fdc7dd49377.framework.js.unityweb",
+    "Build/0f47c4d53464de0781cc0655a96e06ef.data.unityweb",
+    "Build/3f2126597accf684e35dadf3f8c0e813.wasm.unityweb",
     "TemplateData/style.css"
 
 ];
 
 self.addEventListener('install', function (e) {
+  if (e.request.url.endsWith('/ServiceWorker.js')) { return; }
     console.log('[Service Worker] Install');
+    self.skipWaiting();
     
     e.waitUntil((async function () {
+      for (let name of (await caches.keys()))
+        caches.delete(name);
       const cache = await caches.open(cacheName);
       console.log('[Service Worker] Caching all: app shell and content');
       await cache.addAll(contentToCache);
