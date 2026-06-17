@@ -2,7 +2,7 @@
 #### 토이 프로젝트(26.06.18 - 1.2.0 배포)
 ###### 달에서 오는 비행사와 해골을 구분하고 UFO와 대결하는 게임입니다.
 
-* ## Play
+* ## 실행
   * [GitHub Page](https://malangjwi.github.io/Escape-the-Moon)
 * ## 개발환경
   * Unity 6(6000.0.77f1)
