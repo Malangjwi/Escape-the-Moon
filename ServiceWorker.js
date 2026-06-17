@@ -1,4 +1,4 @@
-const cacheName = "Malangjwi-Escape the Moon-1.0.0";
+const cacheName = "Malangjwi-Escape the Moon-1.1.0";
 const contentToCache = [
     "Build/UnityBuild.loader.js",
     "Build/UnityBuild.framework.js.unityweb",
