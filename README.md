@@ -1,2 +1,11 @@
-# Escape-the-Moon
-Toy Project
+# Escape the Moon
+#### 토이 프로젝트(26.06.18 - 1.2.0 배포)
+###### 달에서 오는 비행사와 해골을 구분하고 UFO와 대결하는 게임입니다.
+
+* ## Play
+  * 링크: https://malangjwi.github.io/Escape-the-Moon
+* ## Credit 
+  * 이미지 리소스:  https://assetstore.unity.com/packages/2d/gui/icons/space-game-gui-kit-298577
+  * 폰트 리소스: https://freesentation.blog/freesentation
+* ## Source Code
+  * 공개예정
