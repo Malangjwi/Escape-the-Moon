@@ -4,8 +4,9 @@
 
 * ## 실행
   * [GitHub Page](https://malangjwi.github.io/Escape-the-Moon)
-* ## 개발환경
+* ## 개발환경 및 기간
   * Unity 6(6000.0.77f1)
+  * 26.06.14 ~ 26.06.18 (55시간)
 * ## 소스코드
   * [주요 기능 코드](https://github.com/Malangjwi/Escape-the-Moon-SourceCode)
 * ## 크레딧
